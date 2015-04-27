@@ -1,0 +1,31 @@
+{
+    "name":"scyfel/contao-formrecipient",
+    "description":"Adds the function to take the email recipient from a form field",
+    "keywords":["contao", "form", "recipient"],
+    "type":"contao-module",
+    "license":"LGPL-3.0+",
+    "authors":[
+        {
+            "name":"Christoph Barkowsky",
+            "email":"hallo@christianbarkowsky.de",
+            "homepage":"http://christianbarkowsky.de",
+            "role":"Developer"
+        }
+    ],
+    "support":{
+            "email":"hallo@christianbarkowsky.de",
+            "issues":"https://github.com/scyfel/contao-formrecipient/issues",
+            "source":"https://github.com/scyfel/contao-formrecipient"
+    },
+    "require":{
+            "php":">=5.3",
+            "contao/core": ">=2.10,<4"
+    },
+    "extra": {
+        "contao": {
+            "sources": {
+                "": "system/modules/formrecipient"
+            }
+        }
+    }
+}
