@@ -21,6 +21,9 @@
             "php":">=5.3",
             "contao/core": ">=2.10,<4"
     },
+    "replace":{
+	    	"contao-legacy/formrecipient": "self.version"  
+    },
     "extra": {
         "contao": {
             "sources": {
