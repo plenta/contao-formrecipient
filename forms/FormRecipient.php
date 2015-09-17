@@ -15,17 +15,15 @@ namespace Contao;
 
 class FormRecipient extends \Form
 {
-	
 	/**
 	 * Process form data, store it in the session and redirect to the jumpTo page
 	 * @param array
 	 */
-	protected function processFormData($arrSubmitted, $arrLabels)
+	protected function processFormData($arrSubmitted, $arrLabels, $arrFiles)
 	{
 		$this->recipient = $this->replaceInsertTags(str_replace(array_map(create_function('$a', 'return "{{form::$a}}";'), array_keys($arrSubmitted)), array_values($arrSubmitted), $this->recipient));
-		
+
 		return parent::processFormData($arrSubmitted, $arrLabels);
 	}
-	
-}
 
+}
