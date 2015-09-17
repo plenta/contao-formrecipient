@@ -23,7 +23,7 @@ class FormRecipient extends \Form
 	{
 		$this->recipient = $this->replaceInsertTags(str_replace(array_map(create_function('$a', 'return "{{form::$a}}";'), array_keys($arrSubmitted)), array_values($arrSubmitted), $this->recipient));
 
-		return parent::processFormData($arrSubmitted, $arrLabels);
+		return parent::processFormData($arrSubmitted, $arrLabels, $arrFiles);
 	}
 
 }
