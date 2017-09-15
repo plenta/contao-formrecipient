@@ -1,5 +1,5 @@
 {
-  "name":"scyfel/contao-formrecipient",
+  "name":"olli-contao/contao-formrecipient",
   "description":"Adds the function to take the email recipient from a form field",
   "keywords":["contao", "form", "recipient"],
   "type":"contao-module",
@@ -19,7 +19,7 @@
   },
   "require":{
     "php":">=5.3",
-    "contao/core": ">=3.2,<4"
+    "contao/core": ">=3.2 || ~4.4"
   },
   "replace":{
     "contao-legacy/formrecipient": "self.version"
