@@ -18,8 +18,8 @@
     "source":"https://github.com/scyfel/contao-formrecipient"
   },
   "require":{
-    "php":">=5.3",
-    "contao/core": ">=3.2 || ~4.4"
+    "php":">=5.5",
+    "contao/core-bundle": "~3.5 || ~4.4"
   },
   "replace":{
     "contao-legacy/formrecipient": "self.version"
