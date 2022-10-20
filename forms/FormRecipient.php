@@ -21,8 +21,7 @@ class FormRecipient extends \Form
 	 */
 	protected function processFormData($arrSubmitted, $arrLabels, $arrFiles)
 	{
-		$this->recipient = $this->replaceInsertTags(str_replace(array_map(create_function('$a', 'return "{{form::$a}}";'), array_keys($arrSubmitted)), array_values($arrSubmitted), $this->recipient));
-
+		$this->recipient = $this->replaceInsertTags(str_replace(array_map(function($a) { return "{{form::$a}}"; }, array_keys($arrSubmitted)), array_values($arrSubmitted), $this->recipient));
 		return parent::processFormData($arrSubmitted, $arrLabels, $arrFiles);
 	}
 
