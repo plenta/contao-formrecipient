@@ -18,7 +18,7 @@ class EfpRecipient extends \Controller
 	
 	public function prepareRecipient($arrSubmitted, $arrFiles, $intOldId, &$arrForm)
 	{
-		$arrForm['formattedMailRecipient'] = $this->replaceInsertTags(str_replace(array_map(create_function('$a', 'return "{{form::$a}}";'), array_keys($arrSubmitted)), array_values($arrSubmitted), $arrForm['formattedMailRecipient']));
+		$arrForm['formattedMailRecipient'] = $this->replaceInsertTags(str_replace(array_map(function($a) { return "{{form::$a}}"; },array_keys($arrSubmitted)), array_values($arrSubmitted), $arrForm['formattedMailRecipient']));
 		
 		return $arrSubmitted;
 	}
